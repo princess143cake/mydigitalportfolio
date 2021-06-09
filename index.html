@@ -47,6 +47,8 @@
     color: gold;
     z-index: -1;
     filter: blur(15px);
+
+    
     
 }
 
@@ -62,6 +64,30 @@
     opacity: 0.3;
     z-index: -2;
 }
+
+.text-area {
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+            font-family: 'Concert One', cursive;
+            font-weight: 900;
+           
+            animation-name: animate;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;            
+            padding:40px;
+            line-height:1.5;
+            text-transform:uppercase;
+         }
+        @keyframes animate {
+            0%,100%{ text-shadow:0 0 30px red; }
+            25%{ text-shadow:0 0 30px orange; }
+            50%{ text-shadow:0 0 30px forestgreen; }
+            75%{ text-shadow:0 0 30px cyan; }
+         }
 
  </style>
 
@@ -151,7 +177,7 @@
             <div class="wow bounceInDown" data-wow-delay="0.4s">
               <div class="section-heading">
               	  <h4 style="color:#67b0d1;">MY GOAL IS TO IMPROVE MYSELF CONTINUOUSLY !!!</h4>
-                <h2>About ME</h2>
+                <h2 class="text-area ">About ME</h2>
                 <i class="fa fa-2x fa-angle-down"></i>
 
               </div>
@@ -185,7 +211,7 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow bounceInDown" data-wow-delay="0.4s">
               <div class="section-heading">
-                <h2>My Skills</h2>
+                <h2 class="text-area ">My Skills</h2>
                 <i class="fa fa-2x fa-angle-down"></i>
 
               </div>
@@ -327,7 +353,7 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow bounceInDown" data-wow-delay="0.4s">
               <div class="section-heading">
-                <h2>My Projects</h2>
+                <h2 class="text-area ">My Projects</h2>
                 <i class="fa fa-2x fa-angle-down"></i>
 
               </div>
@@ -382,7 +408,6 @@
 
 	
 
-  <!-- Section: contact -->
   
   <!-- /Section: contact -->
 
@@ -394,7 +419,7 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow bounceInDown" data-wow-delay="0.4s">
               <div class="section-heading">
-                <h2>Get in touch</h2>
+                <h2 class="text-area ">Get in touch</h2>
                 <i class="fa fa-2x fa-angle-down"></i>
 
               </div>
