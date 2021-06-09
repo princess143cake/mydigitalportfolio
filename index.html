@@ -21,7 +21,47 @@
   <link href="color/default.css" rel="stylesheet">
 
 
- 
+ <style type="text/css">
+ 	
+ 	.effect {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 0 0 20px gold;
+   
+}
+
+.effect::after {
+    top: 0;
+    left: 0;
+    content: attr(text);
+    position: absolute;
+    padding: 0 20px;
+    color: gold;
+    z-index: -1;
+    filter: blur(15px);
+    
+}
+
+.effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 1);
+    filter: blur(50px);
+    opacity: 0.3;
+    z-index: -2;
+}
+
+ </style>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -30,7 +70,7 @@
     <div id="load"></div>
   </div>
 
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <nav id="nav" class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -42,7 +82,7 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Me</a></li>
@@ -58,35 +98,49 @@
   </nav>
 
   <!-- Section: intro -->
-  <section id="intro" class="intro">
+  <section id="intro" class="intro" >
 
 	
-    <div class="slogan">
+    <div class="slogan" >
 	
-	<center><h4 ><img src="img/LOVED.jpg" alt="" class="img-responsive img-circle" style="witdth:80px; height:80px; margin-top:20px" /></h4></center><br>
-		 <h4> Mon R. <span class="text_color">de la Victoria</span> </h4>
-
-	
-
-      <h3 class="effect" >Mobile and Web App   Developer </h3><br><br><br>
-      <hr style="width: 60%;margin-left: auto;margin-right: auto;"></hr>
+	<center > <h4><img src="img/LOVED.jpg" alt="" class="img-responsive img-circle" style="witdth:80px; height:80px; margin-top:60px" /></h4></center>
       
+      <div class="row">
+
+        <div class="col ">
+
+          <h4> Mon R. de la Victoria </h4>
+        </div>
+
+        <div class="col">
+          <h3 class="effect" >Mobile and Web App   Developer </h3>
+
+        </div>
+
+        <div class="col">
+          <hr style="width: 50%;"></hr>
+        </div>
+       
+       
+      
+      </div>
+	   
+     
+
+    </div>
+
+   
+
+     
+    
+    
 
     
-    </div>
-    
-
-    
-    <div style="margin-top:100px;" class="page-scroll">
-      <a href="#service" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-    </div>
   </section>
   <!-- /Section: intro -->
 
   <!-- Section: about -->
-  <section id="about" class="home-section text-center">
+  <section id="about" class="home-section text-center bg-gray">
     <div class="heading-about">
       <div class="container">
         <div class="row">
@@ -105,7 +159,7 @@
     </div>
     <div class="container">
 
-      <p  style="color:#111; font-size: large;  font-family: Arial, Helvetica, sans-serif;" align="left">
+      <p  style="color:#111; font-size: large;  font-family: sans-serif;" align="left">
 	    An aspiring back-end/front-end developer and UI/UX designer for web technologies.
 	      I spent most of my free time designing my friends and other people's project and thesis work for extra income.
 	      I am interested in learning more about the latest and most efficient frameworks or tools that will increase overall productivity. 
@@ -262,9 +316,9 @@
 
 <!-- Section: project -->
 
-	 <section id="project" class="home-section text-center bg-gray">
+	 <section id="project" class="home-section text-center">
 
-<div class="heading-about ">
+<div class="heading-about">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -326,106 +380,80 @@
 	
 
   <!-- Section: contact -->
-  
-  <!-- /Section: contact -->
+  <section id="contact" class="home-section text-center">
+    <div class="heading-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>Get in touch</h2>
+                <i class="fa fa-2x fa-angle-down"></i>
 
-
-
-    <!-- ======= Contact Section ======= -->
-
-
-    <section id="contact" class="contact text-center bg-gray">
-
-      <div class="heading-about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="wow bounceInDown" data-wow-delay="0.4s">
-                <div class="section-heading">
-                  <h2>Contact</h2>
-                  <i class="fa fa-2x fa-angle-down"></i>
-  
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      
-      <div class="container " data-aos="fade-up">
+    <div class="container">
 
-       
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+
+
+      <div class="row">
+
+ <div class="col-lg-4 "></div>
+ 	
+        <div class="col-lg-4 ">
+          <div >
+
+
+          	<div class="col-lg-8 ">
+
+         
+          <div class="widget-contact">
+          
+            <address>
+				  <strong>Unloved Design, Inc.</strong><br>
+				 Talisay City Cebu <br>
+				 Cansojong Washington Sreet<br>
+				  <abbr title="Phone">Mobile:</abbr> 0947-107-2893
+				</address>
+
+            <address>
+				  <strong>Email</strong><br>
+				  <a href="mailto:#">mdelavictoria.binary@gmail.com</a>
+				</address>
+            <address>
+				  <strong>My Social Networks</strong><br>
+                       	<ul class="company-social">
+                            <li class="social-facebook"><a href="https://www.facebook.com/kissiney.sweet" target="_blank"><i class="fa fa-facebook"></i></a></li>
+
+                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>                                                                 
+
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+				</address>
+
+          </div>
+        </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 "></div><br><br>
+
         
-        <div class="row mt-5">
-
-          
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-            
-           <button style="margin-bottom:10px;" class="btn btn-primary" type="submit">Send Message</button>
-            </form>
-
-          </div>
-
-          <div class="col-lg-4 card">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Cansojong Talisay City Cebu</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>mdelavictoria.binary@gmail.com</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Facebook:</h4>
-                <a href=" https://www.facebook.com/kissiney.sweet"><p>https://www.facebook.com/kissiney.sweet</p></a>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Mobile:</h4>
-                <p>0947-107-2893</p>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
-    </section><!-- End Contact Section -->
 
-  
-  
-
+    </div>
+  </section>
+  <!-- /Section: contact -->
 
   <footer>
     <div class="container">
